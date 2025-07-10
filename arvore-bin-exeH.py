@@ -27,8 +27,10 @@ class BinaryTree:
         if node is None:
             node = self.root
         #FAZERR
-        self.postorder_traversal(node.left)
-        self.postorder_traversal(node.right)
+        if node.left:
+            self.simetric_traversal(node.left)
+        if node.right:
+            self.postorder_traversal(node.right)
         print(node)
     
     def height(self, node=None):
